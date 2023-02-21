@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\ListingController;
-use App\Http\Controllers\MusicPeaceController;
 use Faker\Provider\Lorem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListingController;
+use App\Http\Controllers\MusicPeaceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +18,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MusicPeaceController::class,'index']);
+Route::get('/home', [MusicPeaceController::class,'home']);
+Route::get('/Artist', [MusicPeaceController::class,'Artist']);
+Route::get('/Album', [MusicPeaceController::class,'Album']);
+Route::get('/music', [MusicPeaceController::class,'Music']);
+Route::get('/music/add', [MusicPeaceController::class,'add']);
+Route::get('/Artists',[MusicPeaceController::class,'Artists']);
+Route::get('/Albums',[MusicPeaceController::class,'Albums']);
 Route::get('/create',[MusicPeaceController::class,'create']);
 Route::get('/post',[MusicPeaceController::class,'store']);
 Route::get('/list/{listing}',[MusicPeaceController::class,'show']);
+
+
 
 
 // Route::get('/hello', function(){
@@ -32,3 +42,6 @@ Route::get('/list/{listing}',[MusicPeaceController::class,'show']);
 // Route::get('/search', function(Request $request){
 //     return $request->name .' '. $request->city;
 // });
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

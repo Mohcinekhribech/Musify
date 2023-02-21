@@ -10,11 +10,37 @@ class MusicPeaceController extends Controller
         // show all listing
         public function index()
         {
-            ddd('index');
+            return view('index');
             // return view('listings',[
             //     'listings'=>MusicPeaceModel::all()
             // ]);
         }
+        public function Artists(){
+            return view('Artists');
+        }
+        public function Albums(){
+            return view('Albums');
+        }
+        public function Music(){
+            return view('Music');
+        }
+        public function add(){
+            return view('AddForm');
+        }
+        public function Album(){
+            return view('Album');
+        }
+        public function Artist()
+        {
+            return view('Artist');
+            // return view('listings',[
+            //     'listings'=>MusicPeaceModel::all()
+            // ]);
+        }
+        public function Home(){
+            return view('home');
+        }
+        
         // single listing
         public function show(MusicPeaceModel $listing)
         {

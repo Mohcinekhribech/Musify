@@ -1,0 +1,6 @@
+{
+    "require": {
+        "laravel/breeze": "^1.10",
+        "laravel/ui": "^3.4"
+    }
+}
