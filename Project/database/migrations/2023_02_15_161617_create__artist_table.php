@@ -13,11 +13,12 @@ class CreateArtistTable extends Migration
      */
     public function up()
     {
-        Schema::create('artist', function (Blueprint $table) {
+        Schema::create('artists', function (Blueprint $table) {
             $table->id();
             $table->string('image');
             $table->string('name');
             $table->string('country');
+            $table->integer('archive')->default(0);
             $table->date('date_of_birth');
             $table->timestamps();
         });

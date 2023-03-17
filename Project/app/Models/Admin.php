@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -41,14 +41,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function comment(){
-        return $this->hasMany(comments::class,'clientId','id');
-    }
-    public function playlistSongs(){
-        return $this->hasMany(playlistSongs::class,'clientId','id');
-    }
-    public function like(){
-        return $this->hasMany(Like::class,'clientId','id');
-    }
-    
 }
