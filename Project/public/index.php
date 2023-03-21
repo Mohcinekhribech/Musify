@@ -1,4 +1,5 @@
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/da9e6ce9d6.js" crossorigin="anonymous"></script>
 <?php
 
 use Illuminate\Contracts\Http\Kernel;

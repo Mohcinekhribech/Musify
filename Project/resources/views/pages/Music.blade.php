@@ -7,12 +7,7 @@
                         <h2 class="font-bold text-[#EEF2F7] text-3xl pt-6 pl-8">{{$music->title}}</h2>
                         <h3 class="font-bold text-[#EEF2F7] text-xl pt-4 pl-8">Artist Name</h3>
                         <h4 class="font-bold text-[#EEF2F7] text-lg pt-2 pl-8">413 Listen</h4>
-                        <div value="/Musify/Project/storage/app/public/{{$music->Music}}" class="playbtn border-[0.3px]  border-[#EEF2F7] mt-4 ml-12 rounded-full w-fit p-4 text-[#EEF2F7]">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-8 h-8">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
-                            </svg>
+                        <div value="/Musify/Project/storage/app/public/{{$music->Music}}" class="playbtn fa-solid fa-play border-[0.3px]  border-[#EEF2F7] mt-4 ml-12 rounded-full w-fit p-4 text-[#EEF2F7]">
                         </div>
                     </div>
                 </div>

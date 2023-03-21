@@ -6,7 +6,7 @@
     <div class="flex justify-between">
         <h3 class="font-medium mx-4 text-[#EEF2F7] text-lg">{{ $music['title'] }}</h3>
         @if (App\Http\Controllers\LikeController::check($music->id))
-            <a onclick="removeLike('/Musify/Project/public/removelikes/{{ $user[0]->like[0]->id }}')">
+            <a onclick="removeLike({{ $user[0]->like[0]->id }})">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                     class="w-6 h-6 mx-4 text-red-400 my-auto">
                     <path
@@ -14,7 +14,7 @@
                 </svg>
             </a>
         @else
-            <a onclick="addLike('/Musify/Project/public/addLike/{{ $music->id }}')" class="AddToPlaylist">
+            <a href="/Musify/Project/public/addLike/{{ $music->id }}" class="AddToPlaylist">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6 mx-4 text-[#d3d7dc] my-auto">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -80,23 +80,5 @@
             e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add(
                 'hidden')
         })
-    }
-
-    function removeLike(link) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("get", link, true);
-        xhttp.send();
-    }
-
-    function addToPlaylist(playlistId, musicId) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("get", `/Musify/Project/public/AddToPlaylist/${playlistId}/${musicId}`, true);
-        xhttp.send();
-    }
-
-    function Addlike(link) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("get",link, true);
-        xhttp.send();
     }
 </script>
